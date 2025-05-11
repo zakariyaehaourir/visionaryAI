@@ -16,7 +16,25 @@
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  
+  <style>
+    .video-section {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 40px 0; /* Espacement avant et après la section */
+    }
+    
+    .video-container {
+      width: 80%; /* 80% de la largeur de la page */
+      max-width: 1200px; /* Largeur maximale optionnelle */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ombre légère optionnelle */
+    }
+    
+    video {
+      display: block; /* Évite l'espace blanc sous la vidéo */
+      background-color: #000; /* Fond noir si la vidéo ne couvre pas tout */
+    }
+  </style>
 </head>
 <body>
   <header id="header">
@@ -222,7 +240,15 @@
       </div>
     </div>
   </section>
-
+  <section class="video-section">
+    <div class="video-container">
+      <video width="100%"defer controls loop playsinline>
+        <source src="images/Google AR Glasses Are So Subtle, You Might Miss Them! (1).mp4" type="video/mp4">
+        <source src="votre-video.webm" type="video/webm">
+        Votre navigateur ne supporte pas les vidéos HTML5.
+      </video>
+    </div>
+  </section>
   <section id="market" class="market">
     <div class="container">
       <div class="section-header">
