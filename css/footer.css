@@ -1,0 +1,70 @@
+/* Footer Styles */
+.footer {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  padding: var(--space-xl) 0 var(--space-md);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-xl);
+}
+
+.footer-brand {
+  max-width: 250px;
+}
+
+.footer-brand .logo-text {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+
+.footer-brand p {
+  color: var(--text-tertiary);
+  font-size: var(--font-size-md);
+}
+
+.footer-links {
+  display: flex;
+  gap: var(--space-xl);
+}
+
+.footer-column h4 {
+  color: var(--text-light);
+  margin-bottom: var(--space-md);
+  font-size: var(--font-size-lg);
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: var(--space-sm);
+}
+
+.footer-column a {
+  color: var(--text-tertiary);
+  transition: color var(--transition-short);
+}
+
+.footer-column a:hover {
+  color: var(--primary-light);
+}
+
+.footer-bottom {
+  padding-top: var(--space-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: var(--text-tertiary);
+  font-size: var(--font-size-sm);
+  margin-bottom: 0;
+}

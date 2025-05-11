@@ -1,0 +1,100 @@
+/* Market Section Styles */
+.market {
+  background-color: var(--bg-light);
+  position: relative;
+}
+
+.market-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.market-card {
+  background-color: var(--bg-off-white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-lg);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-short);
+}
+
+.market-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.market-stat {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: var(--space-xs);
+  line-height: 1;
+}
+
+.market-card p {
+  color: var(--text-secondary);
+  font-size: var(--font-size-md);
+  margin-bottom: 0;
+}
+
+.market-chart {
+  background-color: var(--bg-off-white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.market-chart h3 {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  color: var(--text-primary);
+}
+
+.chart-container {
+  height: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: var(--space-sm);
+  gap: 10px;
+}
+
+.chart-bar {
+  flex: 1;
+  background: var(--bg-gradient);
+  border-radius: var(--border-radius-sm) var(--border-radius-sm) 0 0;
+  max-width: 60px;
+  transition: height var(--transition-long);
+  position: relative;
+}
+
+.chart-bar::before {
+  content: attr(data-year);
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+  opacity: 0;
+  transition: opacity var(--transition-short);
+}
+
+.chart-bar:hover::before {
+  opacity: 1;
+}
+
+.chart-labels {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-tertiary);
+  font-size: var(--font-size-sm);
+}
+
+.chart-labels span {
+  flex: 1;
+  text-align: center;
+  max-width: 60px;
+}
